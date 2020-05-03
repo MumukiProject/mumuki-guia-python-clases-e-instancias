@@ -4,7 +4,7 @@ Momento, ¿cómo es eso? ¿Una clase puede **crear nuevos objetos**?
 
 ¡Así es! Aprovechemos la clase `Celular` para **instanciar** los celulares de `María` y `Lucrecia`:
 
-```ruby
+```python
 celular_de_maría = Celular.new
 celular_de_lucrecia = Celular.new
 ```
