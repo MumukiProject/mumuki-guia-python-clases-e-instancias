@@ -4,6 +4,6 @@ Veamos por qué decidimos hacer una nueva clase, `SuperZombi`:
 * `sabe_correr?` tiene comportamiento distinto a la clase `Zombi`
 * `recibir_danio!` tiene comportamiento distinto a la clase `Zombi`
 
-Sin embargo habrás notado que, aunque esos últimos dos métodos son distintos, hay **cuatro** que son idénticos: `salud`, `gritar`, `sin_vida?`, y su inicialización mediante `initialize`. ¡Hasta tienen un mismo atributo, `@salud`! ¿Acaso eso no significa que estamos repitiendo mucha lógica en ambas clases? :frowning:
+Sin embargo habrás notado que, aunque esos últimos dos métodos son distintos, hay **cuatro** que son idénticos: `salud`, `gritar`, `sin_vida?`, y su inicialización mediante `__init__`. ¡Hasta tienen un mismo atributo, `self.salud`! ¿Acaso eso no significa que estamos repitiendo mucha lógica en ambas clases? :frowning:
 
-¡Así es! Pero todavía no contamos con las herramientas necesarias para solucionarlo. :pensive: 
+¡Así es! Pero todavía no contamos con las herramientas necesarias para solucionarlo. :pensive:

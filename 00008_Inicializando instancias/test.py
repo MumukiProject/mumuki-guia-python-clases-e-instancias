@@ -1,75 +1,75 @@
-class Zombi
-  def initialize
-    @salud = 100
-  end
-  
-  def salud
-    @salud
-  end
-  
+class Zombi:
+  def __init_(self):
+    self.salud = 100
+
+
+  def salu(self):
+    self.salud
+
+
   def sabe_correr?
-    false
-  end
-  
+    False
+
+
   def sin_vida?
-    @salud == 0
-  end
-  
-  def recibir_danio!(puntos)
-    @salud = [@salud - puntos * 2, 0].max
-  end
+    self.salud == 0
 
-  def gritar
+
+  def recibir_danio!(self, puntos):
+    self.salud = [self.salud - puntos * 2, 0].max
+
+
+  def grita(self):
     "agrrrg!"
-  end
-end
 
-bouba = Zombi.new
-kiki = Zombi.new
+
+
+bouba = Zombi
+kiki = Zombi
 #Zombi, bouba y kiki van aquí para no ensuciar la Biblioteca, que muestra el código de Juliana.
 
-it "juliana es Sobreviviente" do
-  expect(juliana.instance_of? Sobreviviente). to be true
-end
+def test_"juliana es Sobreviviente":
+  expect(juliana.instance_of? Sobreviviente). to be True
 
-it "anastasia es Sobreviviente" do
-  expect(anastasia.instance_of? Sobreviviente). to be true
-end
 
-it "La energía inicial de juliana es 1000" do
+def test_"anastasia es Sobreviviente":
+  expect(anastasia.instance_of? Sobreviviente). to be True
+
+
+def test_"La energía inicial de juliana es 1000":
   expect(juliana.energia).to eq 1000
-end
 
-it "La energía inicial de anastasia es 1000" do
+
+def test_"La energía inicial de anastasia es 1000":
   expect(anastasia.energia).to eq 1000
-end
 
-it "Si juliana ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos" do
+
+def test_"Si juliana ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos":
   juliana.atacar!(bouba, 5)
   expect(bouba.salud).to eq 90
-end
 
-it "Si anastasia ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos" do
+
+def test_"Si anastasia ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos":
   anastasia.atacar!(kiki, 5)
   expect(kiki.salud).to eq 90
-end
 
-it "Si juliana ataca con 10 puntos de daño a un zombi su salud disminuye en 20 puntos" do
+
+def test_"Si juliana ataca con 10 puntos de daño a un zombi su salud disminuye en 20 puntos":
   juliana.atacar!(bouba, 10)
   expect(bouba.salud).to eq 70
-end
 
-it "Si anastasia ataca con 10 puntos de daño a un zombi su salud disminuye en 20 puntos" do
+
+def test_"Si anastasia ataca con 10 puntos de daño a un zombi su salud disminuye en 20 puntos":
   anastasia.atacar!(kiki, 10)
   expect(kiki.salud).to eq 70
-end
 
-it "Si juliana ataca a un zombi con mucho daño su salud no puede ser menor a 0" do
+
+def test_"Si juliana ataca a un zombi con mucho daño su salud no puede ser menor a 0":
   juliana.atacar!(bouba, 69)
   expect(bouba.salud).to eq 0
-end
 
-it "Si anastasia ataca a un zombi con mucho daño su salud no puede ser menor a 0" do
+
+def test_"Si anastasia ataca a un zombi con mucho daño su salud no puede ser menor a 0":
   anastasia.atacar!(kiki, 69)
   expect(kiki.salud).to eq 0
-end
+

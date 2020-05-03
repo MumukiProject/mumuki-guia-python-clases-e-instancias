@@ -1,30 +1,29 @@
-zombi = Zombi.new(100)
+zombi = Zombi(100)
 
-it "Si creo un nuevo Zombi le puedo especificar su salud inicial" do
-  zombi42 = Zombi.new(42)
+def test_"Si creo un nuevo Zombi le puedo especificar su salud inicial":
+  zombi42 = Zombi(42)
   expect(zombi42.salud). to eq 42
-end
 
-it "Un Zombi no sabe correr" do
-  expect(zombi.sabe_correr?).to be false
-end
 
-it "Un Zombi grita ¡agrrrg!" do
+def test_"Un Zombi no sabe correr":
+  expect(zombi.sabe_correr?).to be False
+
+
+def test_"Un Zombi grita ¡agrrrg!":
   expect(zombi.gritar).to eq "¡agrrrg!"
-end
 
-it "Un Zombi con salud inicial 100 no está sin vida" do
-  expect(zombi.sin_vida?).to be false
-end
 
-it "Si un Zombi de salud 100 recibe 5 puntos de daño disminuye su salud en 10 puntos y no está sin vida" do
+def test_"Un Zombi con salud inicial 100 no está sin vida":
+  expect(zombi.sin_vida?).to be False
+
+
+def test_"Si un Zombi de salud 100 recibe 5 puntos de daño disminuye su salud en 10 puntos y no está sin vida":
   zombi.recibir_danio!(5)
   expect(zombi.salud).to eq 90
-  expect(zombi.sin_vida?).to be false
-end
+  expect(zombi.sin_vida?).to be False
 
-it "Si un Zombi recibe mucho daño su salud es 0 y está sin vida" do
+
+def test_"Si un Zombi recibe mucho daño su salud es 0 y está sin vida":
   zombi.recibir_danio!(69)
   expect(zombi.salud).to eq 0
-  expect(zombi.sin_vida?).to be true
-end
+  expect(zombi.sin_vida?).to be True

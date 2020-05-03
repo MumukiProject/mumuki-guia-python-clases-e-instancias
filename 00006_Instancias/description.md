@@ -5,8 +5,8 @@ Momento, ¿cómo es eso? ¿Una clase puede **crear nuevos objetos**?
 ¡Así es! Aprovechemos la clase `Celular` para **instanciar** los celulares de `María` y `Lucrecia`:
 
 ```python
-celular_de_maría = Celular.new
-celular_de_lucrecia = Celular.new
+celular_de_maría = Celular
+celular_de_lucrecia = Celular
 ```
 
 `Celular`, al igual que _todas las clases_, entiende el mensaje `new`, que crea una nueva **instancia** de esa clase.

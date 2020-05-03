@@ -1,34 +1,34 @@
 module Juliana
-  def self.atacar!(zombi, puntos)
+  def self.atacar!(self, zombi, puntos):
     zombi.recibir_danio!(puntos)
-  end
-end
 
-class Zombi
-  def initialize
-    @salud = 100
-  end
-  
-  def salud
-    @salud
-  end
-  
+
+
+class Zombi:
+  def __init_(self):
+    self.salud = 100
+
+
+  def salu(self):
+    self.salud
+
+
   def sabe_correr?
-    false
-  end
-  
+    False
+
+
   def sin_vida?
-    @salud == 0
-  end
-  
-  def recibir_danio!(puntos)
-    @salud = [@salud - puntos * 2, 0].max
-  end
+    self.salud == 0
 
-  def gritar
+
+  def recibir_danio!(self, puntos):
+    self.salud = [self.salud - puntos * 2, 0].max
+
+
+  def grita(self):
     "agrrrg!"
-  end
-end
 
-bouba = Zombi.new
-kiki = Zombi.new
+
+
+bouba = Zombi
+kiki = Zombi

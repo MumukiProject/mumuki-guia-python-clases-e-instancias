@@ -2,46 +2,46 @@ Si tenemos más de un objeto que se comporta **exactamente** de la misma forma, 
 
 ```python
 module CelularDeMaría
-  @saldo = 25
+  self.saldo = 25
 
   def self.realizar_llamada!
-    @saldo -= 5
-  end
+    self.saldo -= 5
 
-  def self.cargar_saldo!(pesos)
-    @saldo += pesos
-  end
-end
+
+  def self.cargar_saldo!(self, pesos):
+    self.saldo += pesos
+
+
 
 module CelularDeLucrecia
-  @saldo = 25
+  self.saldo = 25
 
   def self.realizar_llamada!
-    @saldo -= 5
-  end
+    self.saldo -= 5
 
-  def self.cargar_saldo!(pesos)
-    @saldo += pesos
-  end
-end
+
+  def self.cargar_saldo!(self, pesos):
+    self.saldo += pesos
+
+
 ```
 
 Podemos generalizarlos en una **clase** `Celular`:
 
 ```python
-class Celular
-  def initialize
-    @saldo = 25
-  end
+class Celular:
+  def __init_(self):
+    self.saldo = 25
+
 
   def realizar_llamada!
-    @saldo -= 5
-  end
+    self.saldo -= 5
 
-  def cargar_saldo!(pesos)
-    @saldo += pesos
-  end
-end
+
+  def cargar_saldo!(self, pesos):
+    self.saldo += pesos
+
+
 ```
 
 > Veamos si se entiende: como `Bouba` y `Kiki` se comportan exactamente de la misma forma, **generalizalos** creando una clase `Zombi` que entienda los mismos cinco mensajes que ellos. Podés ver el código de ambos zombis en la solapa Biblioteca.

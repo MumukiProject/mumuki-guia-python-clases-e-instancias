@@ -1,43 +1,42 @@
-it "Bouba no sabe correr" do
-  expect(Bouba.sabe_correr?).to be false
-end
+def test_"Bouba no sabe correr":
+  expect(Bouba.sabe_correr?).to be False
 
-it "Kiki no sabe correr" do
-  expect(Kiki.sabe_correr?).to be false
-end
 
-it "Bouba grita ¡agrrrg!" do
+def test_"Kiki no sabe correr":
+  expect(Kiki.sabe_correr?).to be False
+
+
+def test_"Bouba grita ¡agrrrg!":
   expect(Bouba.gritar).to eq "¡agrrrg!"
-end
 
-it "Kiki grita ¡agrrrg!" do
+
+def test_"Kiki grita ¡agrrrg!":
   expect(Kiki.gritar).to eq "¡agrrrg!"
-end
 
-it "Bouba tiene 100 de salud inicialmente" do
+
+def test_"Bouba tiene 100 de salud inicialmente":
   expect(Bouba.salud).to eq 100
-end
 
-it "Kiki tiene 100 de salud inicialmente" do
+
+def test_"Kiki tiene 100 de salud inicialmente":
   expect(Kiki.salud).to eq 100
-end
 
-it "Si Bouba recibe 5 puntos de daño disminuye su salud en 10 puntos" do
+
+def test_"Si Bouba recibe 5 puntos de daño disminuye su salud en 10 puntos":
   Bouba.recibir_danio!(5)
   expect(Bouba.salud).to eq 90
-end
 
-it "Si Kiki recibe 5 puntos de daño disminuye su salud en 10 puntos" do
+
+def test_"Si Kiki recibe 5 puntos de daño disminuye su salud en 10 puntos":
   Kiki.recibir_danio!(5)
   expect(Kiki.salud).to eq 90
-end
 
-it "Si Bouba recibe mucho daño su salud no puede ser menor a 0" do
+
+def test_"Si Bouba recibe mucho daño su salud no puede ser menor a 0":
   Bouba.recibir_danio!(69)
   expect(Bouba.salud).to eq 0
-end
 
-it "Si Kiki recibe mucho daño su salud no puede ser menor a 0" do
+
+def test_"Si Kiki recibe mucho daño su salud no puede ser menor a 0":
   Kiki.recibir_danio!(69)
   expect(Kiki.salud).to eq 0
-end

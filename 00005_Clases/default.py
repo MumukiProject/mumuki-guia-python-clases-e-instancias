@@ -1,8 +1,5 @@
-class Zombi
-  def initialize
-    @salud = 100
-  end
-  
+class Zombi:
+  def __init_(self):
+    self.salud = 100
+
   #Escribí el resto de los métodos aquí...
-  
-end

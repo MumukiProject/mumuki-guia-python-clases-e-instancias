@@ -1,17 +1,17 @@
-class Sobreviviente
-  def initialize
-    @energia = 1000
-  end
+class Sobreviviente:
+  def __init_(self):
+    self.energia = 1000
 
-  def energia
-    @energia
-  end
-  
-  def atacar!(zombie, danio)
+
+  def energi(self):
+    self.energia
+
+
+  def atacar!(self, zombie, danio):
     zombie.recibir_danio!(danio)
-  end
-  
-  def ataque_masivo!(zombis)
+
+
+  def ataque_masivo!(self, zombis):
     zombis.each { |zombi| atacar!(zombi, 15) }
-  end
-end
+
+

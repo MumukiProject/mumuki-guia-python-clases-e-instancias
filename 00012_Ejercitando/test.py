@@ -1,64 +1,64 @@
-class Zombi
-  def initialize
-    @salud = 100
-  end
-  
-  def salud
-    @salud
-  end
-  
+class Zombi:
+  def __init_(self):
+    self.salud = 100
+
+
+  def salu(self):
+    self.salud
+
+
   def sabe_correr?
-    false
-  end
-  
+    False
+
+
   def sin_vida?
-    @salud == 0
-  end
-  
-  def recibir_danio!(puntos)
-    @salud = [@salud - puntos * 2, 0].max
-  end
+    self.salud == 0
 
-  def gritar
+
+  def recibir_danio!(self, puntos):
+    self.salud = [self.salud - puntos * 2, 0].max
+
+
+  def grita(self):
     "agrrrg!"
-  end
-end
 
-bouba = Zombi.new
-kiki = Zombi.new
-juliana = Sobreviviente.new
-anastasia = Sobreviviente.new
-candela = Sobreviviente.new
+
+
+bouba = Zombi
+kiki = Zombi
+juliana = Sobreviviente
+anastasia = Sobreviviente
+candela = Sobreviviente
 #Zombi y los objetos van aquí para no ensuciar la Biblioteca, que muestra el código de Sobreviviente.
 
-it "La energía inicial de una sobreviviente es 1000" do
+def test_"La energía inicial de una sobreviviente es 1000":
   expect(juliana.energia).to eq 1000
-end
 
-it "Si una sobreviviente ataca masivamente su energía se reduce a la mitad" do
+
+def test_"Si una sobreviviente ataca masivamente su energía se reduce a la mitad":
   zombis = []
   anastasia.ataque_masivo!(zombis)
   expect(anastasia.energia).to eq 1000 / 2
-end
 
-it "Si una sobreviviente ataca normalmente su energía no se reduce" do
+
+def test_"Si una sobreviviente ataca normalmente su energía no se reduce":
   candela.atacar!(kiki, 5)
   expect(candela.energia).to eq 1000
-end
 
-it "Si una sobreviviente bebe una bebida energética su energía aumenta un 25%" do
+
+def test_"Si una sobreviviente bebe una bebida energética su energía aumenta un 25%":
   juliana.beber!
   expect(juliana.energia).to eq 1000 * 1.25
-end
 
-it "Si una sobreviviente ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos" do
+
+def test_"Si una sobreviviente ataca con 5 puntos de daño a un zombi su salud disminuye en 10 puntos":
   juliana.atacar!(bouba, 5)
   expect(bouba.salud).to eq 90
-end
 
-it "Cuando una sobreviviente ataca masivamente les reduce la vida a todos los zombis en 30 puntos" do
+
+def test_"Cuando una sobreviviente ataca masivamente les reduce la vida a todos los zombis en 30 puntos":
   zombis = []
-  5.times { zombis.push(Zombi.new) }
+  5.times { zombis.push(Zombi) }
   juliana.ataque_masivo!(zombis)
-  expect(zombis.all? { |zombi| zombi.salud == 70 } ). to be true
-end
+  expect(zombis.all? { |zombi| zombi.salud == 70 } ). to be True
+
