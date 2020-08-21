@@ -1,4 +1,4 @@
-Al igual que nos pasó con el resto de los mensajes, `sin_vida?` es exactamente igual para ambos zombis. ¡Otra vez hubo que escribir todo dos veces! :confounded:
+Al igual que nos pasó con el resto de los mensajes, `sin_vida()` es exactamente igual para ambos zombis. ¡Otra vez hubo que escribir todo dos veces! :confounded:
 
 Ahora ya es imposible no verlo: todo lo que se modifique en un zombi también se modifica en el otro. ¿Qué problemas nos trae esto?
 

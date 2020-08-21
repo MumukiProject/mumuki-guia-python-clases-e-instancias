@@ -1,14 +1,14 @@
-Si tenemos más de un objeto que se comporta **exactamente** de la misma forma, lo que podemos hacer es generalizar ese comportamiento declarando una **clase**. Por ejemplo, si tenemos dos celulares con el mismo saldo y ambos tienen las mismas funcionalidades, `realizar_llamada!` y `cargar_saldo!` :iphone: :
+Si tenemos más de un objeto que se comporta **exactamente** de la misma forma, lo que podemos hacer es generalizar ese comportamiento declarando una **clase**. Por ejemplo, si tenemos dos celulares con el mismo saldo y ambos tienen las mismas funcionalidades, `realizar_llamada()` y `cargar_saldo()` :iphone: :
 
 ```python
 module CelularDeMaría
   self.saldo = 25
 
-  def self.realizar_llamada!
+  def self.realizar_llamada()
     self.saldo -= 5
 
 
-  def self.cargar_saldo!(self, pesos):
+  def self.cargar_saldo()(self, pesos):
     self.saldo += pesos
 
 
@@ -16,11 +16,11 @@ module CelularDeMaría
 module CelularDeLucrecia
   self.saldo = 25
 
-  def self.realizar_llamada!
+  def self.realizar_llamada()
     self.saldo -= 5
 
 
-  def self.cargar_saldo!(self, pesos):
+  def self.cargar_saldo()(self, pesos):
     self.saldo += pesos
 
 
@@ -34,11 +34,11 @@ class Celular:
     self.saldo = 25
 
 
-  def realizar_llamada!
+  def realizar_llamada()
     self.saldo -= 5
 
 
-  def cargar_saldo!(self, pesos):
+  def cargar_saldo()(self, pesos):
     self.saldo += pesos
 
 
